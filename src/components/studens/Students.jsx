@@ -2,28 +2,11 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
 import { fade, makeStyles } from "@material-ui/core/styles";
-import MenuIcon from "@material-ui/icons/Menu";
 import Card from "@material-ui/core/Card";
-import SearchIcon from "@material-ui/icons/Search";
-import { useState } from "react";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemAvatar from "@material-ui/core/ListItemAvatar";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
-import ListItemText from "@material-ui/core/ListItemText";
 import Avatar from "@material-ui/core/Avatar";
-import FormGroup from "@material-ui/core/FormGroup";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
 import Grid from "@material-ui/core/Grid";
-import FolderIcon from "@material-ui/icons/Folder";
-import DeleteIcon from "@material-ui/icons/Delete";
-import AddCircleIcon from "@material-ui/icons/AddCircle";
-import api from "../../services/api";
-import axios from "axios";
 import { useSelector } from "react-redux";
 import StudentsItem from "../studentsItem/StudentsItem";
 import HatIcon from "../../images/HatIcon.png";
@@ -125,19 +108,6 @@ const Students = () => {
             <Typography className={classes.title} variant="h6" noWrap>
               Students
             </Typography>
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search…"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-                inputProps={{ "aria-label": "search" }}
-              />
-            </div>
           </Toolbar>
         </AppBar>
       </div>

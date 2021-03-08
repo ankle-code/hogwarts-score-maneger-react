@@ -1,7 +1,7 @@
 import PainelScore from "../../components/painelScore/PainelScore";
 import Students from "../../components/studens/Students";
 import { getStudentsThunk } from "../../store/modules/students/thunks";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import Modal from "../../components/modal/Modal";
 

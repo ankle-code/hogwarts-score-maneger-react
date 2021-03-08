@@ -15,33 +15,37 @@ export const ModalContainer = styled.div`
 
 export const ModalCard = styled(Card)`
   width: 400px;
+  height: 400px;
   position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
-  display: flex;
   align-items: center;
+  flex-direction: row;
+  background-color: #e4e4e4;
+  padding: 5px 0 220px 0;
+  display: flex;
   flex-direction: column;
-  background: ${(props) => `linear-gradient(to top, #d4cdcd, ${props.color})`};
 `;
 
 export const ModalTitle = styled(Typography)`
   font-size: 35px;
   padding: 20px;
   font-weight: 700;
-  color: #eef2f3;
+  color: ${(props) => props.color};
 `;
 
-export const ModalAvatar = styled(Avatar)`
-  width: 200px;
-  height: 200px;
+export const ModalAvatar = styled.img`
   border-radius: 10px;
+  width: 160px;
+  height: 230px;
 `;
 
 export const ModalIcon = styled(ModalAvatar)`
   width: 80px;
   height: 80px;
+  margin-top: 10px;
 `;
 
 export const ModalInput = styled.input`
@@ -57,13 +61,15 @@ export const ModalCloseBtn = styled(CloseSharpIcon)`
   width: 38px;
   height: 38px;
   position: relative;
-  left: 175px;
+  left: 145px;
   top: 8px;
   cursor: pointer;
 `;
 
 export const ModalWrap = styled.div`
   display: flex;
+  flex-direction: ${(props) => props.direction};
+  align-items: center;
 `;
 
 export const ModalBtn = styled(Button)`
@@ -74,5 +80,5 @@ export const ModalBtn = styled(Button)`
 `;
 
 export const ModalText = styled.p`
-  margin: 20px 0px 0px 0px;
+  margin: 0px;
 `;

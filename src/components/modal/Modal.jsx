@@ -56,25 +56,27 @@ const Modal = () => {
     <ModalContainer showModal={isShowingModal}>
       <ModalCard color={selectedHouse.color}>
         <ModalCloseBtn onClick={closeModal} color="action" />
-        <ModalIcon src={selectedHouse.image} />
-        <ModalTitle color={selectedHouse.color}>
-          {selectedStudent.name}
-        </ModalTitle>
         <ModalAvatar src={selectedStudent.image} />
-        <ModalText>Points:</ModalText>
-        <ModalInput
-          value={points}
-          onChange={handlePoints}
-          label="Points"
-          type="number"
-          placeholder="0"
-          min="0"
-        />
-        <ModalWrap>
-          <ModalBtn onClick={isWinning}>GAIN</ModalBtn>
-          <ModalBtn isLosable onClick={isLosing}>
-            LOSE
-          </ModalBtn>
+        <ModalWrap direction="column">
+          <ModalIcon src={selectedHouse.image} />
+          <ModalTitle color={selectedHouse.color}>
+            {selectedStudent.name}
+          </ModalTitle>
+          <ModalText>Points:</ModalText>
+          <ModalInput
+            value={points > 0 ? points : ""}
+            onChange={handlePoints}
+            label="Points"
+            type="number"
+            placeholder="0"
+            min="0"
+          />
+          <ModalWrap direction="row">
+            <ModalBtn onClick={isWinning}>GAIN</ModalBtn>
+            <ModalBtn isLosable onClick={isLosing}>
+              LOSE
+            </ModalBtn>
+          </ModalWrap>
         </ModalWrap>
       </ModalCard>
     </ModalContainer>
